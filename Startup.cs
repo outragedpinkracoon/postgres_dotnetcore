@@ -32,7 +32,7 @@ namespace FirstApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var connection = "User ID=valerie;Password=password!;Host=localhost;Port=5432;Database=KittyApp;Pooling=true;";
+            var connection = "User ID=user;Password=password!;Host=localhost;Port=5432;Database=KittyApp;Pooling=true;";
              services.AddDbContext<KittyContext>(
                  opts => opts.UseNpgsql(connection)
             );
